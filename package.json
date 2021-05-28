@@ -1,0 +1,16 @@
+{
+  "name": "myproject",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.3.4"
+  },
+  "dependencies": {
+    "three": "^0.129.0",
+    "three-gltf-loader": "^1.111.0"
+  }
+}
