@@ -17,10 +17,10 @@ function runAnimation() {
   );
 
   //Load background texture
-  //const loaderTexture = new THREE.TextureLoader();
-  //loaderTexture.load("./model/background.jpeg", function (texture) {
-  //  scene.background = texture;
-  //});
+  const loaderTexture = new THREE.TextureLoader();
+  loaderTexture.load("./model/background.jpeg", function (texture) {
+    scene.background = texture;
+  });
 
   var loader = new THREE.GLTFLoader();
 
@@ -76,8 +76,8 @@ function runAnimation() {
 
   function updateCamera(ev) {
     let div1 = document.getElementById("div1");
-    camera.position.x = 20 - window.scrollY / 200.0;
-    camera.position.z = 20 - window.scrollY / 200.0;
+    camera.position.x = 20 - window.scrollY / 400.0;
+    camera.position.z = 20 - window.scrollY / 400.0;
   }
 
   window.addEventListener("scroll", updateCamera);
