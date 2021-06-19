@@ -37,7 +37,7 @@ function runAnimation() {
   //scene.add(cube);
 
   loader.load(
-    "./model/scene.gltf",
+    "./model/lego_astro_scooter/scene.gltf",
     function (gltf) {
       model = gltf.scene.children[0];
       model.receiveShadow = false; //default
@@ -50,7 +50,8 @@ function runAnimation() {
     }
   );
 
-  camera.position.set(0, 0, 20);
+  camera.position.set(100, 100, 100);
+  camera.lookAt(new THREE.Vector3(1000, -2000, 0));
 
   const light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
   light.position.set(100, 10, 0);
@@ -68,7 +69,7 @@ function runAnimation() {
     requestAnimationFrame(animate);
 
     model.rotation.x += 0.01;
-    model.rotation.y += 0.01;
+    //model.rotation.y += 0.01;
     model.rotation.z += 0.01;
 
     renderer.render(scene, camera);
@@ -76,8 +77,8 @@ function runAnimation() {
 
   function updateCamera(ev) {
     let div1 = document.getElementById("div1");
-    camera.position.x = 20 - window.scrollY / 400.0;
-    camera.position.z = 20 - window.scrollY / 400.0;
+    camera.position.x = 20 - window.scrollY / 50.0;
+    camera.position.z = 20 - window.scrollY / 50.0;
   }
 
   window.addEventListener("scroll", updateCamera);
