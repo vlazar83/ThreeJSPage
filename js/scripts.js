@@ -140,28 +140,11 @@ Particle.prototype.init = function (i) {
   // https://discourse.threejs.org/t/solved-geometry-vertices-is-undefined/3133
   //const positionT = box.geometry.attributes.position;
   //const vectorT = new THREE.Vector3();
-  //for (let i = 0, l = positionT.count; i < l; i++) {
-  //  vectorT.fromBufferAttribute(positionT, i);
-  //  vectorT.applyMatrix4(box.matrixWorld);
-  //console.log(vectorT);
 
-  //box.geometry.vertices[i].x += -2 + Math.random() * 4;
-  //box.geometry.vertices[i].y += -2 + Math.random() * 4;
-  //box.geometry.vertices[i].z += -2 + Math.random() * 4;
-  //}
-
-  console.log(box);
-
-  const position = box.geometry.attributes.position;
-  const vector = new THREE.Vector3();
-
-  for (let i = 0, l = position.count; i < l; i++) {
-    vector.fromBufferAttribute(position, i);
-    vector.setX = vector.x - 2 + Math.random() * 4;
-    vector.setY = vector.y - 2 + Math.random() * 4;
-    vector.setZ = vector.z - 2 + Math.random() * 4;
-    vector.applyMatrix4(box.matrixWorld);
-    //console.log(vector);
+  for (var i = 0; i < box.geometry.vertices.length; i++) {
+    box.geometry.vertices[i].x += -2 + Math.random() * 4;
+    box.geometry.vertices[i].y += -2 + Math.random() * 4;
+    box.geometry.vertices[i].z += -2 + Math.random() * 4;
   }
 
   //for (var i = 0; i < box.geometry.attributes.position.count; i++) {
