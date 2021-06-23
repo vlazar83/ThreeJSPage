@@ -10,7 +10,7 @@
     "vite": "^2.3.4"
   },
   "dependencies": {
-    "three": "^0.129.0",
+    "three": "^0.83.0",
     "three-gltf-loader": "^1.111.0"
   }
 }
