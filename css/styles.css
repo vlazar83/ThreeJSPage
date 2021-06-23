@@ -38,6 +38,10 @@ main {
   }
 }
 
+.intro-graphic {
+  visibility: hidden;
+}
+
 .flickity-viewport {
   height: 100% !important;
 }
