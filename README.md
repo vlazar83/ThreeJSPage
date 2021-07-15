@@ -14,3 +14,6 @@ npm run build
 
 TODO:
 CSS / SCSS issue
+
+## final page can be visited here:
+https://astrobot.hu/
